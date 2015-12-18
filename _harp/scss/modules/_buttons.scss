@@ -22,6 +22,10 @@ button {
   box-sizing: border-box;
 }
 
+.navbutton {
+  margin-left: 10px;
+}
+
 input {
   &[type="submit"],
   &[type="reset"],

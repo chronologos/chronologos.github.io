@@ -4,17 +4,11 @@ head
   meta(charset="utf-8")
   meta(name="viewport", content="width=device-width, initial-scale=1")
   link(rel="stylesheet", href="/scss/skeleton.css")
-  link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Raleway:400,300,600")
-body
-  div.container
-    br
-    a.button(href="/") Home
-    a.button(href="/projects/foodpoints") Foodpoints+
-    a.button(href="/projects/memento") Memento
-    a.button.button-primary(href="http://github.com/chronologos") Github
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet")
+body  
   div.container
     br
     != yield
   div.container#footer
     hr
-    p Copyright (c) Yi Yan Tay 
+    p #[a(href="/") Home] #[a(href="http://github.com/chronologos") Github] #[a(href="https://www.dropbox.com/s/sj0o62iflhvyvr9/yiyantayCV.pdf?dl=0") My Résumé]
