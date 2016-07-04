@@ -1,2 +1,0 @@
-# harpBlog
-Personal Blog
