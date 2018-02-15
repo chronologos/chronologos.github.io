@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 漁夫王</title>
-    <link>http://example.org/posts/</link>
+    <link>https://chronologos.github.io/posts/</link>
     <description>Recent content in Posts on 漁夫王</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Feb 2018 13:30:13 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chronologos.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <link>https://chronologos.github.io/posts/my-first-post/</link>
       <pubDate>Thu, 15 Feb 2018 13:30:13 +0800</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
+      <guid>https://chronologos.github.io/posts/my-first-post/</guid>
       <description>Bacon ipsum dolor amet beef buffalo spare ribs jerky landjaeger biltong rump meatball sirloin ham meatloaf chicken fatback brisket pastrami. Pork loin buffalo tongue rump, boudin fatback flank corned beef ground round. Ground round salami hamburger spare ribs bresaola cupim pork chop brisket meatball swine pancetta sirloin pig buffalo. Burgdoggen chicken hamburger, picanha bacon beef ribs biltong buffalo. Flank short loin frankfurter, salami ribeye kielbasa bresaola turducken tri-tip ham ham hock.</description>
     </item>
     
