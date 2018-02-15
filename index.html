@@ -1,96 +1,287 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
+  <title>About</title>
+  <meta property="og:title" content="About" />
+  <meta name="twitter:title" content="About" />
+  <meta name="description" content=" Ian Tay Software engineer on Google Cloud
+Especially interested in embedded systems, lazy functional programming, donuts
+B.SE Electrical and Computer Engineering, Duke University
+contact CV 📜 | github
+pgp -----BEGIN PGP PUBLIC KEY BLOCK----- mQENBFoEqHsBCADPC1TqZGbvaPnB7XRo6XneH/z1IA9rGXU8y6f8/4XHjcSPI04F 5Wi4I5IjiZEtlVAJCwdsLOK3yFbzcPZg1e2n/PDUmvfEu&#43;JkSr7lQW3a8p0mAPFz 9Eib4jpiI/AFZZuv9M8nGKG04vRnNs/eGDM/Jze8VfFsPLAaLD094JcRk&#43;hlRB3F wvGv8eVHABO0AyUci6hK2Bl1unau7j71LR3rVbGq&#43;HYMFePrdoQYgR/fUENp7nc6 S&#43;yrmzY7UluO8z5PW28rokIDGP&#43;9&#43;9hIXYXS4eEq9M8jw8kR&#43;vVy1P6ZipF&#43;m5n2 xrlhP4LhMzMsHBrjQSXfzI6Z6iBsJSAYV5JJABEBAAG0H1lpIFlhbiBUYXkgPHNr cnBmbkBsYXZhYml0LmNvbT6JAVQEEwEIAD4WIQRQGSxc26MrFpF7PVUcP75N&#43;7u3 iwUCWgSoewIbAwUJA8JnAAULCQgHAgYVCAkKCwIEFgIDAQIeAQIXgAAKCRAcP75N &#43;7u3i8cKCACrCbj&#43;17dYlRoYDDocTCV3G6kUE85qq85&#43;KyAh7SbAGIntdvGf&#43;1zs wA0B8SJhHN48JEaVXrlRNrl8B8e&#43;/EDlB8M33gz8wFlGxTZhfsQmU64hOIoQIMYB 5BaG2uf5wWJNsuGanlutsoOSN2PAqC5XBYndJtWUXBAv3YRwxgyz8Y2NKs&#43;Kf5wr Wa&#43;W/NESIxQ49yxzewQcLIXrob807/zhv3lOlrupM7Cpf6DBp7MOdhWEUaqeexNH Y&#43;&#43;ex&#43;fhwkaW2cjumvO6pHfE4WYQbHqXZTl06CL8Z9gU/lzDtC3G6vY&#43;h5s0e9OV pL5g&#43;iTwUudmu5gAxKyRIAzgSTc4FmhgtCxZaSBZYW4gVGF5IChHaXRIdWIga2V5 KSA8eWl5YW50YXlAZ21haWwuY29tPokBVAQTAQgAPhYhBFAZLFzboysWkXs9VRw/ vk37u7eLBQJaBKtlAhsDBQkDwmcABQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJ EBw/vk37u7eLi0kH/RVqNCyQqAkxeupQk0TD9j&#43;J6AGFHt1WmL8TjrBjQmXUt9Tu FW1LQ9k9Ljqw0r//ReUIDrk/n5qtcFHy/s4H3ZXIneKEcrGH6cJHNJtfN/b1qSc5 J344W13ueBLSvxUWCPhPGgrA/Y0wHbz1NQdE23VsLxdc3U1QpzrdO3twrGROeDbM 02lAYlmlU0qYbd3uayXteW5k52y5EHXnr5b7yPoxW/yqTHlUp&#43;rpDUn5emF5KetK 6Zu2zaK&#43;UkGSz4tZvmNiu&#43;i2A4WyUCUx4DR4s3qVOXiTCf4tq4d3vt6tKP/k8/Yd LnlrlGt6NTc2gVx0Y0&#43;QaxeYw4fabuFgO&#43;FJ4fC5AQ0EWgSoewEIAOlykjGHDQXO R3x39zxITqO04Te9r6S6kn&#43;riv3NJK0U27LRTnUgnxMGD0lskzjuylY1VcbV1JtU 9RYcufFmOMAwVWnfCkkVsLXy5FTdaJpu9Qa&#43;CN3kNUKuc1j1ATYnN5u&#43;jGQP4Von zgbRwGMChDVV2znLajwunP3kpiws/Gsgap9&#43;OCKTg8zAYLfGY&#43;dT3IDF9HYlMvog 9AjD6G2jIR6vY&#43;58asXI5r/pM6nOoIBk/o9eS6RTipjDPeg31PjuXuN5B2kTmiNd /LvISCgruVH7Uw0V1lkJOkHBQ8Uox7iIuzch&#43;1PK3fuu04xWow0p&#43;S&#43;q7N3ZRAnA 0fdumoSIWmcAEQEAAYkBPAQYAQgAJhYhBFAZLFzboysWkXs9VRw/vk37u7eLBQJa BKh7AhsMBQkDwmcAAAoJEBw/vk37u7eLMGYH/2Ff6kA/Elb62KFdYAwxsu47qqRR xNOw5TSN2RVVyLLONayiDnr/hV/D9nNUyVcP6uWZsGlw2tLf4GwFYJx4EeZHcGwZ i7wvsTGX6diuJMVedQA6QNgKcHp8yitvLQCtwFasNh9xFKYAFZeqGP&#43;BdsGzM6z5 Z24fnsdF0lkKSPGXuCOS74kMY&#43;3jczIdGMPY/F9RmqFGBDb1XY6qu0sVCWFWHXwp PnNAuEEdIRgdXLP2VLmy2kqS8Z6Spnu66KbbIhq0Ve&#43;H5pzGVntDAQZuhIRpoCz/ mOa7hLDkQmzt2kEy9hW2X6bIdxN0&#43;IX19ucmHNeaEDnt7x&#43;Vyaa&#43;1uucGGE= =gBGF -----END PGP PUBLIC KEY BLOCK-----  ">
+  <meta property="og:description" content=" Ian Tay Software engineer on Google Cloud
+Especially interested in embedded systems, lazy functional programming, donuts
+B.SE Electrical and Computer Engineering, Duke University
+contact CV 📜 | github
+pgp -----BEGIN PGP PUBLIC KEY BLOCK----- mQENBFoEqHsBCADPC1TqZGbvaPnB7XRo6XneH/z1IA9rGXU8y6f8/4XHjcSPI04F 5Wi4I5IjiZEtlVAJCwdsLOK3yFbzcPZg1e2n/PDUmvfEu&#43;JkSr7lQW3a8p0mAPFz 9Eib4jpiI/AFZZuv9M8nGKG04vRnNs/eGDM/Jze8VfFsPLAaLD094JcRk&#43;hlRB3F wvGv8eVHABO0AyUci6hK2Bl1unau7j71LR3rVbGq&#43;HYMFePrdoQYgR/fUENp7nc6 S&#43;yrmzY7UluO8z5PW28rokIDGP&#43;9&#43;9hIXYXS4eEq9M8jw8kR&#43;vVy1P6ZipF&#43;m5n2 xrlhP4LhMzMsHBrjQSXfzI6Z6iBsJSAYV5JJABEBAAG0H1lpIFlhbiBUYXkgPHNr cnBmbkBsYXZhYml0LmNvbT6JAVQEEwEIAD4WIQRQGSxc26MrFpF7PVUcP75N&#43;7u3 iwUCWgSoewIbAwUJA8JnAAULCQgHAgYVCAkKCwIEFgIDAQIeAQIXgAAKCRAcP75N &#43;7u3i8cKCACrCbj&#43;17dYlRoYDDocTCV3G6kUE85qq85&#43;KyAh7SbAGIntdvGf&#43;1zs wA0B8SJhHN48JEaVXrlRNrl8B8e&#43;/EDlB8M33gz8wFlGxTZhfsQmU64hOIoQIMYB 5BaG2uf5wWJNsuGanlutsoOSN2PAqC5XBYndJtWUXBAv3YRwxgyz8Y2NKs&#43;Kf5wr Wa&#43;W/NESIxQ49yxzewQcLIXrob807/zhv3lOlrupM7Cpf6DBp7MOdhWEUaqeexNH Y&#43;&#43;ex&#43;fhwkaW2cjumvO6pHfE4WYQbHqXZTl06CL8Z9gU/lzDtC3G6vY&#43;h5s0e9OV pL5g&#43;iTwUudmu5gAxKyRIAzgSTc4FmhgtCxZaSBZYW4gVGF5IChHaXRIdWIga2V5 KSA8eWl5YW50YXlAZ21haWwuY29tPokBVAQTAQgAPhYhBFAZLFzboysWkXs9VRw/ vk37u7eLBQJaBKtlAhsDBQkDwmcABQsJCAcCBhUICQoLAgQWAgMBAh4BAheAAAoJ EBw/vk37u7eLi0kH/RVqNCyQqAkxeupQk0TD9j&#43;J6AGFHt1WmL8TjrBjQmXUt9Tu FW1LQ9k9Ljqw0r//ReUIDrk/n5qtcFHy/s4H3ZXIneKEcrGH6cJHNJtfN/b1qSc5 J344W13ueBLSvxUWCPhPGgrA/Y0wHbz1NQdE23VsLxdc3U1QpzrdO3twrGROeDbM 02lAYlmlU0qYbd3uayXteW5k52y5EHXnr5b7yPoxW/yqTHlUp&#43;rpDUn5emF5KetK 6Zu2zaK&#43;UkGSz4tZvmNiu&#43;i2A4WyUCUx4DR4s3qVOXiTCf4tq4d3vt6tKP/k8/Yd LnlrlGt6NTc2gVx0Y0&#43;QaxeYw4fabuFgO&#43;FJ4fC5AQ0EWgSoewEIAOlykjGHDQXO R3x39zxITqO04Te9r6S6kn&#43;riv3NJK0U27LRTnUgnxMGD0lskzjuylY1VcbV1JtU 9RYcufFmOMAwVWnfCkkVsLXy5FTdaJpu9Qa&#43;CN3kNUKuc1j1ATYnN5u&#43;jGQP4Von zgbRwGMChDVV2znLajwunP3kpiws/Gsgap9&#43;OCKTg8zAYLfGY&#43;dT3IDF9HYlMvog 9AjD6G2jIR6vY&#43;58asXI5r/pM6nOoIBk/o9eS6RTipjDPeg31PjuXuN5B2kTmiNd /LvISCgruVH7Uw0V1lkJOkHBQ8Uox7iIuzch&#43;1PK3fuu04xWow0p&#43;S&#43;q7N3ZRAnA 0fdumoSIWmcAEQEAAYkBPAQYAQgAJhYhBFAZLFzboysWkXs9VRw/vk37u7eLBQJa BKh7AhsMBQkDwmcAAAoJEBw/vk37u7eLMGYH/2Ff6kA/Elb62KFdYAwxsu47qqRR xNOw5TSN2RVVyLLONayiDnr/hV/D9nNUyVcP6uWZsGlw2tLf4GwFYJx4EeZHcGwZ i7wvsTGX6diuJMVedQA6QNgKcHp8yitvLQCtwFasNh9xFKYAFZeqGP&#43;BdsGzM6z5 Z24fnsdF0lkKSPGXuCOS74kMY&#43;3jczIdGMPY/F9RmqFGBDb1XY6qu0sVCWFWHXwp PnNAuEEdIRgdXLP2VLmy2kqS8Z6Spnu66KbbIhq0Ve&#43;H5pzGVntDAQZuhIRpoCz/ mOa7hLDkQmzt2kEy9hW2X6bIdxN0&#43;IX19ucmHNeaEDnt7x&#43;Vyaa&#43;1uucGGE= =gBGF -----END PGP PUBLIC KEY BLOCK-----  ">
+  <meta name="twitter:description" content=" Ian Tay Software engineer on Google Cloud
+Especially interested in embedded systems, lazy functional programming, donuts
+B.SE Electrical and Computer Engineering, Duke University
+contact CV 📜 | …">
+  <meta name="author" content="Ian Tay"/>
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="http://example.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="漁夫王" />
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>__repr(self)__ by chronologos</title>
-  </head>
+  <meta name="generator" content="Hugo 0.36" />
+  <link rel="canonical" href="http://example.org/" />
+  <link rel="alternate" href="http://example.org/index.xml" type="application/rss+xml" title="漁夫王">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://example.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="http://example.org/css/syntax.css" /><link rel="stylesheet" href="http://example.org/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/chronologos">View on GitHub</a>
-    <div class="shell">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="posts" href="/posts">posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/">About</a>
+            </li>
+          
+        
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>__repr(self)__</h1>
-            <h2>Ian Tay&#39;s home on the web</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+        
 
-      <div id="no-downloads">
-        <span class="inner">
-        </span>
-      </div>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h1>
-<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h1>
-
-<ul>
-<li>Electrical and Computer Engineering at Duke</li>
-<li>Concentration in <a href="https://en.wikipedia.org/wiki/Philosophy,_Politics_and_Economics">PPE</a>. Favourite philosopher: Robert Nozick for his brilliant ideas in ASU.</li>
-<li>I love Python for its simplicity. <code>&gt;&gt;&gt; import this</code>
-</li>
-<li>I use Vim and occasionally, Atom.</li>
-<li>I love performing sleight of hand magic 🃎 </li>
-<li>
-<a href="https://github.com/chronologos/chronologos.github.io/blob/master/yiyantayCV.pdf">My Résumé</a>.</li>
-</ul>
-
-<h1>
-<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projects</h1>
-
-<p><strong>Ulysses</strong>
-A web app for people to make <a href="https://en.wikipedia.org/wiki/Ulysses_pact">Ulysses Contracts</a> with others. Built on Django and MongoDB.</p>
-
-<p><strong>Foodpoints+ <a href="https://github.com/chronologos">Github</a></strong>
-A web app for Duke Students to track their food spending. Built with Node.js, MongoDB, Angular.js. Has reached 250 monthly active users.</p>
-
-<p><strong>Memento <a href="https://github.com/chronologos">Github</a></strong>
-Use Bluetooth Beacons to allow people to securely store photos at locations. Built on Node.js, Express.js, MongoDB. 1 of 10 Final Round Projects for Hackathon@SG.</p>
-
-<h1>
-<a id="misc" class="anchor" href="#misc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc</h1>
-
-<p><img src="https://dl.dropboxusercontent.com/u/1184923/rainier.jpg" alt="Me on Rainier"></p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>Projects by <a href="https://github.com/chronologos">chronologos</a> can be found on <a href="https://github.com/chronologos">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
+        
+      </ul>
     </div>
 
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
     
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>漁夫王</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+          
+
+<h1 id="ian-tay">Ian Tay</h1>
+
+<p>Software engineer on Google Cloud</p>
+
+<p>Especially interested in embedded systems, lazy functional programming, donuts</p>
+
+<p>B.SE Electrical and Computer Engineering, Duke University</p>
+
+<hr />
+
+<h2 id="contact">contact</h2>
+
+<p><a href="cv.pdf">CV 📜</a> | <a href="https://github.com/chronologos">github</a></p>
+
+<hr />
+
+<h2 id="pgp">pgp</h2>
+
+<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=gBGF
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+
+        
+
+        
+      </div>
+    </div>
+  </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Ian Tay
+            
+          
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://example.org/">漁夫王</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.36</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://example.org/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="http://example.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
   </body>
 </html>
