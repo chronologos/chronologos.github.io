@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Ian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Mar 2018 12:14:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 10 Mar 2018 20:59:53 +0800</lastBuildDate>
     
 	<atom:link href="https://chronologos.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Code</title>
+      <link>https://chronologos.github.io/tags/code/</link>
+      <pubDate>Sat, 10 Mar 2018 20:59:53 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/tags/code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Fiction</title>

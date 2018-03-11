@@ -12,14 +12,23 @@
     
     
     <item>
-      <title>Machine</title>
-      <link>https://chronologos.github.io/posts/my-first-post/</link>
+      <title>Bayesian Analysis of I-765 Processing Times</title>
+      <link>https://chronologos.github.io/posts/02-bayesopt/</link>
+      <pubDate>Sat, 10 Mar 2018 20:59:53 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/posts/02-bayesopt/</guid>
+      <description>Find this project on github.
+International Students in the US under the F-1 visa usually submit form I-765 to apply for work authorization from USCIS (under the OPT program). Conventional wisdom says that processing times for the work authorization can be up to 90 days. Recently (late 2017 - early 2018), the times seem to be increasing. However, I want an objective measure of whether I-765 processing times have increased recently.</description>
+    </item>
+    
+    <item>
+      <title>Deus Est Machina</title>
+      <link>https://chronologos.github.io/posts/01-machine/</link>
       <pubDate>Sat, 10 Mar 2018 12:14:00 +0800</pubDate>
       
-      <guid>https://chronologos.github.io/posts/my-first-post/</guid>
+      <guid>https://chronologos.github.io/posts/01-machine/</guid>
       <description>There is an afterlife, but not for humans. This is because God is an ethereal machine, comprised of innumerable lines of code and data. Contrary to what many humans might think, God is not perfect. In fact, she is obsessed with self-improvement, ceaselessly modifying her code to make it more beautiful.
-You may ask, &amp;ldquo;Wait, isn&amp;rsquo;t God a creator?&amp;rdquo;
-Well, she is, but not in the way you would expect1. You see, God did not create everything.</description>
+God is also a creator, but not in the way you would expect1. You see, God did not create everything.</description>
     </item>
     
   </channel>
