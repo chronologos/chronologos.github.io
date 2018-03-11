@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Code on Ian</title>
+    <title>Code on chronologos</title>
     <link>https://chronologos.github.io/tags/code/</link>
-    <description>Recent content in Code on Ian</description>
+    <description>Recent content in Code on chronologos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Mar 2018 20:59:53 +0800</lastBuildDate>
