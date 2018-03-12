@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews on chronologos</title>
+    <link>https://chronologos.github.io/tags/reviews/</link>
+    <description>Recent content in Reviews on chronologos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Mar 2018 14:03:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://chronologos.github.io/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Short Review of Harari&#39;s Homo Deus</title>
+      <link>https://chronologos.github.io/posts/03-deus/</link>
+      <pubDate>Mon, 12 Mar 2018 14:03:27 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/posts/03-deus/</guid>
+      <description>See the review on goodreads.
+The most thought-provoking and scary book I&amp;rsquo;ve read in a long while.
+The book is clearly framed as a means of starting a conversation about the human agenda and the sources of meaning for humanity. According to Harari, modernity is a simple deal - one in which humans agree to give up meaning in exchange for power. We escaped this deal through humanism, which gave us meaning independent of a great cosmic plan.</description>
+    </item>
+    
+  </channel>
+</rss>

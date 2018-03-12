@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://chronologos.github.io/posts/03-deus/</loc>
+    <lastmod>2018-03-12T14:03:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chronologos.github.io/posts/02-bayesopt/</loc>
     <lastmod>2018-03-10T20:59:53+08:00</lastmod>
   </url>
@@ -18,12 +23,6 @@
   </url>
   
   <url>
-    <loc>https://chronologos.github.io/tags/code/</loc>
-    <lastmod>2018-03-10T20:59:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://chronologos.github.io/tags/fiction/</loc>
     <lastmod>2018-03-10T12:14:00+08:00</lastmod>
     <priority>0</priority>
@@ -31,13 +30,25 @@
   
   <url>
     <loc>https://chronologos.github.io/posts/</loc>
+    <lastmod>2018-03-12T14:03:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chronologos.github.io/tags/projects/</loc>
     <lastmod>2018-03-10T20:59:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://chronologos.github.io/tags/reviews/</loc>
+    <lastmod>2018-03-12T14:03:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://chronologos.github.io/tags/</loc>
-    <lastmod>2018-03-10T20:59:53+08:00</lastmod>
+    <lastmod>2018-03-10T12:14:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

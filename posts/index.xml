@@ -6,10 +6,21 @@
     <description>Recent content in Posts on chronologos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Mar 2018 20:59:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 14:03:27 +0800</lastBuildDate>
     
 	<atom:link href="https://chronologos.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Short Review of Harari&#39;s Homo Deus</title>
+      <link>https://chronologos.github.io/posts/03-deus/</link>
+      <pubDate>Mon, 12 Mar 2018 14:03:27 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/posts/03-deus/</guid>
+      <description>See the review on goodreads.
+The most thought-provoking and scary book I&amp;rsquo;ve read in a long while.
+The book is clearly framed as a means of starting a conversation about the human agenda and the sources of meaning for humanity. According to Harari, modernity is a simple deal - one in which humans agree to give up meaning in exchange for power. We escaped this deal through humanism, which gave us meaning independent of a great cosmic plan.</description>
+    </item>
     
     <item>
       <title>Bayesian Analysis of I-765 Processing Times</title>
