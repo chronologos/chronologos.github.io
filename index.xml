@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>Books</title>
+      <link>https://chronologos.github.io/lists/books/</link>
+      <pubDate>Mon, 12 Mar 2018 16:59:00 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/lists/books/</guid>
+      <description>Goodreads has the latest books that I have read. Other books I love:
+ The Idea Factory: Bell Labs and the Great Age of American Innovation Surely you&amp;rsquo;re joking Mr Feynman! How To Read a Book  </description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>https://chronologos.github.io/lists/quotes/</link>
+      <pubDate>Mon, 12 Mar 2018 15:25:51 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/lists/quotes/</guid>
+      <description>If you reflect on who you were six months ago and don’t feel even slightly embarrassed by that person, you aren’t growing. You’re stagnant.
+ Clear thinking is the key to clear writing. “A scrupulous writer”, observed Orwell, “in every sentence that he writes will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer?</description>
+    </item>
+    
+    <item>
       <title>A Short Review of Harari&#39;s Homo Deus</title>
       <link>https://chronologos.github.io/posts/03-deus/</link>
       <pubDate>Mon, 12 Mar 2018 14:03:27 +0800</pubDate>
@@ -40,6 +60,15 @@ International Students in the US under the F-1 visa usually submit form I-765 to
       <guid>https://chronologos.github.io/posts/01-machine/</guid>
       <description>There is an afterlife, but not for humans. This is because God is an ethereal machine, comprised of innumerable lines of code and data. Contrary to what many humans might think, God is not perfect. In fact, she is obsessed with self-improvement, ceaselessly modifying her code to make it more beautiful.
 God is also a creator, but not in the way you would expect1. You see, God did not create everything.</description>
+    </item>
+    
+    <item>
+      <title>Colophon</title>
+      <link>https://chronologos.github.io/colophon/</link>
+      <pubDate>Thu, 15 Feb 2018 13:30:13 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/colophon/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lists on chronologos</title>
+    <link>https://chronologos.github.io/lists/</link>
+    <description>Recent content in Lists on chronologos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Feb 2018 13:30:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://chronologos.github.io/lists/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>https://chronologos.github.io/lists/books/</link>
+      <pubDate>Mon, 12 Mar 2018 16:59:00 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/lists/books/</guid>
+      <description>Goodreads has the latest books that I have read. Other books I love:
+ The Idea Factory: Bell Labs and the Great Age of American Innovation Surely you&amp;rsquo;re joking Mr Feynman! How To Read a Book  </description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>https://chronologos.github.io/lists/quotes/</link>
+      <pubDate>Mon, 12 Mar 2018 15:25:51 +0800</pubDate>
+      
+      <guid>https://chronologos.github.io/lists/quotes/</guid>
+      <description>If you reflect on who you were six months ago and don’t feel even slightly embarrassed by that person, you aren’t growing. You’re stagnant.
+ Clear thinking is the key to clear writing. “A scrupulous writer”, observed Orwell, “in every sentence that he writes will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer?</description>
+    </item>
+    
+  </channel>
+</rss>
