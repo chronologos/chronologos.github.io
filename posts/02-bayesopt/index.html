@@ -30,7 +30,7 @@ International Students in the US under the F-1 visa usually submit form I-765 to
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="chronologos" />
 
-  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="generator" content="Hugo 0.53" />
   <link rel="canonical" href="https://chronologos.github.io/posts/02-bayesopt/" />
   <link rel="alternate" href="https://chronologos.github.io/index.xml" type="application/rss+xml" title="chronologos">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -206,14 +206,14 @@ International Students in the US under the F-1 visa usually submit form I-765 to
 <span style="font-weight:bold">import</span> <span style="font-weight:bold">scipy.stats</span> <span style="font-weight:bold">as</span> <span style="font-weight:bold">stats</span>
 <span style="font-weight:bold">import</span> <span style="font-weight:bold">pymc3</span> <span style="font-weight:bold">as</span> <span style="font-weight:bold">pm</span>
 <span style="font-weight:bold">import</span> <span style="font-weight:bold">theano.tensor</span> <span style="font-weight:bold">as</span> <span style="font-weight:bold">tt</span></code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">figsize(10, 8)
-data=np.loadtxt(<span style="font-style:italic"></span><span style="font-style:italic">&#39;interpolated.csv&#39;</span>,delimiter = <span style="font-style:italic"></span><span style="font-style:italic">&#39; &#39;</span>,dtype={<span style="font-style:italic"></span><span style="font-style:italic">&#39;names&#39;</span>: (<span style="font-style:italic"></span><span style="font-style:italic">&#39;status&#39;</span>, <span style="font-style:italic"></span><span style="font-style:italic">&#39;days&#39;</span>),<span style="font-style:italic"></span><span style="font-style:italic">&#39;formats&#39;</span>: (<span style="font-style:italic"></span><span style="font-style:italic">&#39;S1&#39;</span>, <span style="font-style:italic"></span><span style="font-style:italic">&#39;i4&#39;</span>)})
+data=np.loadtxt(<span style="font-style:italic">&#39;interpolated.csv&#39;</span>,delimiter = <span style="font-style:italic">&#39; &#39;</span>,dtype={<span style="font-style:italic">&#39;names&#39;</span>: (<span style="font-style:italic">&#39;status&#39;</span>, <span style="font-style:italic">&#39;days&#39;</span>),<span style="font-style:italic">&#39;formats&#39;</span>: (<span style="font-style:italic">&#39;S1&#39;</span>, <span style="font-style:italic">&#39;i4&#39;</span>)})
 filtered_data = np.array([d[1] <span style="font-weight:bold">for</span> d <span style="font-weight:bold">in</span> data <span style="font-weight:bold">if</span> d[0]==<span style="font-style:italic">b</span><span style="font-style:italic">&#39;d&#39;</span>])
 np.random.shuffle(filtered_data)
-plt.hist(filtered_data, histtype=<span style="font-style:italic"></span><span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=20, alpha=0.85,
-         label=<span style="font-style:italic"></span><span style="font-style:italic">&#34;OPT Processing Time, Days&#34;</span>, color=<span style="font-style:italic"></span><span style="font-style:italic">&#34;#A60628&#34;</span>, density=True)
-plt.title(<span style="font-style:italic"></span><span style="font-style:italic">&#34;Scraped processing times, received dates between Nov-Dec 2017&#34;</span>)
-plt.legend(loc=<span style="font-style:italic"></span><span style="font-style:italic">&#34;upper left&#34;</span>)
-plt.xlabel(<span style="font-style:italic"></span><span style="font-style:italic">&#34;Days&#34;</span>)
+plt.hist(filtered_data, histtype=<span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=20, alpha=0.85,
+         label=<span style="font-style:italic">&#34;OPT Processing Time, Days&#34;</span>, color=<span style="font-style:italic">&#34;#A60628&#34;</span>, density=True)
+plt.title(<span style="font-style:italic">&#34;Scraped processing times, received dates between Nov-Dec 2017&#34;</span>)
+plt.legend(loc=<span style="font-style:italic">&#34;upper left&#34;</span>)
+plt.xlabel(<span style="font-style:italic">&#34;Days&#34;</span>)
 filtered_data.mean()</code></pre></div>
 <p><img src="output_2_1.png" alt="png" /></p>
 
@@ -221,31 +221,31 @@ filtered_data.mean()</code></pre></div>
 
 <p>According to an online tracking <a href="http://www.trackitt.com/">site</a>, the mean (self-reported) processing time is 74 days. We can model this as \(\mu_p \sim Normal(74, 20^{2})\) (where 20 is a randomly-plucked number for our standard deviation). I&rsquo;m not very sure of what \(\sigma_p\) could be, so I let \(\sigma_p \sim Uniform(0,45)\) - with the broad-ranged uniform distribution reflecting my lack of strong prior belief.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="font-weight:bold">with</span> pm.Model() <span style="font-weight:bold">as</span> model:
-    lambda_ = pm.Normal(<span style="font-style:italic"></span><span style="font-style:italic">&#34;lambda&#34;</span>, mu=74, sd = 20)
-    sd = pm.Uniform(<span style="font-style:italic"></span><span style="font-style:italic">&#34;sd&#34;</span>, lower=0,upper=45)
-    processing_time = pm.Normal(<span style="font-style:italic"></span><span style="font-style:italic">&#34;processing_time&#34;</span>, mu=lambda_, sd=sd, observed=filtered_data)</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="font-weight:bold">with</span> model:
+    lambda_ = pm.Normal(<span style="font-style:italic">&#34;lambda&#34;</span>, mu=74, sd = 20)
+    sd = pm.Uniform(<span style="font-style:italic">&#34;sd&#34;</span>, lower=0,upper=45)
+    processing_time = pm.Normal(<span style="font-style:italic">&#34;processing_time&#34;</span>, mu=lambda_, sd=sd, observed=filtered_data)</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="font-weight:bold">with</span> model:
     step = pm.Metropolis()
-    trace = pm.sample(10000, tune=5000,step=step, start=pm.find_MAP())</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">lambda_samples = trace[<span style="font-style:italic"></span><span style="font-style:italic">&#39;lambda&#39;</span>]
-sigma_samples = trace[<span style="font-style:italic"></span><span style="font-style:italic">&#39;sd&#39;</span>]
+    trace = pm.sample(10000, tune=5000,step=step, start=pm.find_MAP())</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">lambda_samples = trace[<span style="font-style:italic">&#39;lambda&#39;</span>]
+sigma_samples = trace[<span style="font-style:italic">&#39;sd&#39;</span>]
 
 figsize(12.5, 10)
 <span style="font-style:italic">#histogram of the samples:</span>
 
 ax = plt.subplot(311)
 
-plt.hist(lambda_samples, histtype=<span style="font-style:italic"></span><span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=30, alpha=0.85,
-         label=<span style="font-style:italic"></span><span style="font-style:italic">&#34;posterior of $\lambda$&#34;</span>, color=<span style="font-style:italic"></span><span style="font-style:italic">&#34;#A60628&#34;</span>, density=True)
-plt.legend(loc=<span style="font-style:italic"></span><span style="font-style:italic">&#34;upper left&#34;</span>)
+plt.hist(lambda_samples, histtype=<span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=30, alpha=0.85,
+         label=<span style="font-style:italic">&#34;posterior of $\lambda$&#34;</span>, color=<span style="font-style:italic">&#34;#A60628&#34;</span>, density=True)
+plt.legend(loc=<span style="font-style:italic">&#34;upper left&#34;</span>)
 plt.title(<span style="font-style:italic">r</span><span style="font-style:italic">&#34;&#34;&#34;Posterior distributions of the variables
 </span><span style="font-style:italic">    $\lambda,\;\sigma$&#34;&#34;&#34;</span>)
-plt.xlabel(<span style="font-style:italic"></span><span style="font-style:italic">&#34;$\lambda$, days&#34;</span>)
+plt.xlabel(<span style="font-style:italic">&#34;$\lambda$, days&#34;</span>)
 
 ax = plt.subplot(312)
-plt.hist(sigma_samples, histtype=<span style="font-style:italic"></span><span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=30, alpha=0.85,
-       label=<span style="font-style:italic"></span><span style="font-style:italic">&#34;posterior of $\sigma$&#34;</span>, color=<span style="font-style:italic"></span><span style="font-style:italic">&#34;#7A68A6&#34;</span>, density=True)
-plt.legend(loc=<span style="font-style:italic"></span><span style="font-style:italic">&#34;upper left&#34;</span>)
-plt.xlabel(<span style="font-style:italic"></span><span style="font-style:italic">&#34;$\sigma$, days&#34;</span>);
-trace[<span style="font-style:italic"></span><span style="font-style:italic">&#39;lambda&#39;</span>].mean()</code></pre></div>
+plt.hist(sigma_samples, histtype=<span style="font-style:italic">&#39;stepfilled&#39;</span>, bins=30, alpha=0.85,
+       label=<span style="font-style:italic">&#34;posterior of $\sigma$&#34;</span>, color=<span style="font-style:italic">&#34;#7A68A6&#34;</span>, density=True)
+plt.legend(loc=<span style="font-style:italic">&#34;upper left&#34;</span>)
+plt.xlabel(<span style="font-style:italic">&#34;$\sigma$, days&#34;</span>);
+trace[<span style="font-style:italic">&#39;lambda&#39;</span>].mean()</code></pre></div>
 <p><img src="output_6_1.png" alt="png" /></p>
 
 <p>Because we have &gt;10000 observations, the Bayesian result for \(\lambda_p\) is actually very close to the sample mean. This doesn&rsquo;t mean that the Bayesian analysis was for nought though - we also get measures of uncertainty in the form of a distribution for \(\lambda_p\) and \(\sigma_p\).</p>
@@ -311,7 +311,7 @@ processing 82</pre></div>
           
 
           &nbsp;&bull;&nbsp;
-          March 12, 2018
+          December 27, 2018
 
           &nbsp;&bull;&nbsp;
           <a href= https://chronologos.github.io/colophon >Colophon</a>
